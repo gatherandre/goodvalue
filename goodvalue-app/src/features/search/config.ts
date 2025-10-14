@@ -18,6 +18,7 @@ export const CURATED_MARKETPLACES: string[] = [
   "Carrefour",
   "Extra",
   "Hortifruti",
+  "Prezunic",
   "Superprix",
   "Zona Sul",
   "Zoom",

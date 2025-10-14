@@ -5,6 +5,7 @@ import { dedupeByLink } from "./utils.js";
 import { scrapeZoom } from "./scrapers/zoom.js";
 import { scrapeCarrefour } from "./scrapers/carrefour.js";
 import { scrapeSuperprix } from "./scrapers/superprix.js";
+import { scrapePrezunic } from "./scrapers/prezunic.js";
 import { scrapeAtacadao } from "./scrapers/atacadao.js";
 import { scrapeZonaSul } from "./scrapers/zonaSul.js";
 import { scrapeHortifruti } from "./scrapers/hortifruti.js";
@@ -16,6 +17,7 @@ export const SCRAPERS = [
   { marketplace: "Zona Sul", run: scrapeZonaSul },
   { marketplace: "Hortifruti", run: scrapeHortifruti },
   { marketplace: "Superprix", run: scrapeSuperprix },
+  { marketplace: "Prezunic", run: scrapePrezunic },
   { marketplace: "Atacadão", run: scrapeAtacadao },
   { marketplace: "Zoom", run: scrapeZoom },
 ] as const;
