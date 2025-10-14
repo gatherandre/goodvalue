@@ -1,0 +1,39 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2580
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fnil\fcharset0 Menlo-Bold;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red153\green153\blue153;}
+{\*\expandedcolortbl;;\csgray\c0;\csgenericrgb\c60000\c59998\c59999;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf2 \CocoaLigature0 Deixei tudo pronto no repo para voc\'ea subir a API ao Cloud Run quando quiser:\
+\
+  - 
+\f1\b Dockerfile (em 
+\f0\b0 \cf3 goodvalue-scrapers/
+\f1\b \cf2 )
+\f0\b0  j\'e1 est\'e1 preparado para rodar a API em\
+    container.\
+  - 
+\f1\b Novos recursos em 
+\f0\b0 \cf3 goodvalue-scrapers/deploy/cloud-run/
+\f1\b \cf2 :
+\f0\b0 \
+      - \cf3 cloudrun.yaml\cf2 : manifesto da service. Basta trocar \cf3 PROJECT_ID\cf2  e usar\
+        \cf3 gcloud run services replace cloudrun.yaml\cf2  se preferir manifestos.\
+      - \cf3 README.md\cf2 : passo a passo resumido com os dois comandos \cf3 gcloud\cf2 \
+        necess\'e1rios (\cf3 gcloud builds submit\cf2  e \cf3 gcloud run deploy\cf2 ), incluindo\
+        ajustes de porta/mem\'f3ria.\
+\
+  Fluxo resumido:\
+\
+  cd goodvalue-scrapers\
+  gcloud builds submit --tag gcr.io/$GOOGLE_CLOUD_PROJECT/goodvalue-scrapers\
+\
+  gcloud run deploy goodvalue-scrapers \\\
+    --image gcr.io/$GOOGLE_CLOUD_PROJECT/goodvalue-scrapers \\\
+    --platform managed \\\
+    --region us-central1 \\\
+    --allow-unauthenticated \\\
+    --port 4000 \\\
+    --memory 1Gi\
+}

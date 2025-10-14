@@ -1,0 +1,23 @@
+# Dependencies
+**/node_modules/
+
+# Build outputs
+**/dist/
+**/tmp/
+**/build/
+
+# Expo / React Native caches
+/.expo/
+**/.expo/
+**/.expo-shared/
+
+# Logs
+*.log
+npm-debug.log*
+
+# macOS cruft
+.DS_Store
+
+# Local environment
+.env
+.env.*

@@ -1,0 +1,17 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: goodvalue-scrapers
+spec:
+  template:
+    metadata:
+      annotations:
+        autoscaling.knative.dev/minScale: "0"
+    spec:
+      containers:
+        - image: gcr.io/PROJECT_ID/goodvalue-scrapers
+          ports:
+            - containerPort: 4000
+          env:
+            - name: PORT
+              value: "4000"
