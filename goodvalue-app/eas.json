@@ -6,6 +6,9 @@
     "preview": {
       "developmentClient": false,
       "distribution": "internal",
+      "env": {
+        "EXPO_PUBLIC_API_URL": "https://goodvalue-scrapers-980091502013.us-central1.run.app"
+      },
       "android": {
         "buildType": "apk"
       }
@@ -13,6 +16,9 @@
     "production": {
       "developmentClient": false,
       "distribution": "store",
+      "env": {
+        "EXPO_PUBLIC_API_URL": "https://goodvalue-scrapers-980091502013.us-central1.run.app"
+      },
       "android": {
         "buildType": "app-bundle"
       }

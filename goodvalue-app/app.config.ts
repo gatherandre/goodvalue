@@ -65,7 +65,17 @@ export default ({ config }: ConfigContext): ExpoConfig => {
       backgroundColor: "#2B6CB0",
     },
     extra,
-    plugins: ["expo-router"],
+    plugins: [
+      [
+        "expo-splash-screen",
+        {
+          image: "./assets/brand/splash.png",
+          resizeMode: "contain",
+          backgroundColor: "#2B6CB0",
+        },
+      ],
+      "expo-router",
+    ],
     assetBundlePatterns: ["**/*"],
     android: {
       ...config.android,

@@ -16,6 +16,7 @@
     "expo-constants": "~18.0.9",
     "expo-linking": "~8.0.8",
     "expo-router": "~6.0.12",
+    "expo-splash-screen": "^31.0.10",
     "expo-status-bar": "~3.0.8",
     "react": "19.1.0",
     "react-dom": "19.1.0",
@@ -24,6 +25,8 @@
     "react-native-screens": "~4.16.0"
   },
   "devDependencies": {
+    "@babel/plugin-syntax-export-default-from": "^7.22.5",
+    "babel-preset-expo": "^54.0.4",
     "typescript": "^5.0.0"
   }
 }

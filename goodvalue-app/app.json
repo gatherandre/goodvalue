@@ -15,7 +15,6 @@
       "package": "com.angui1969.goodvalue"
     },
     "extra": {
-      "apiUrl": "http://192.168.1.6:4000",
       "router": {},
       "eas": {
         "projectId": "12f0217e-a779-4cfc-9428-aebe5df32144"
