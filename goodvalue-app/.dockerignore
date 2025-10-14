@@ -1,0 +1,13 @@
+node_modules
+npm-debug.log
+.expo
+.npm
+dist
+tmp
+package-lock 2.json
+coverage
+.git
+.gitignore
+.vscode
+.idea
+.DS_Store

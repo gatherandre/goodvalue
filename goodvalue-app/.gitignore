@@ -1,0 +1,11 @@
+# Expo local state
+.expo/
+
+# Dependencies and build artifacts
+node_modules/
+dist/
+tmp/
+
+# Logs
+npm-debug.log*
+*.log
